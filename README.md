@@ -1,5 +1,16 @@
-# ASE_Project_Group-2
+# ase_project1
 
-- We aim to make earth’s atmosphere pollution-free by practicing air purifying methods at individual level. 
-- Moreover, we want to create a community from across the globe that works towards making our atmosphere clean and spread awareness about respiratory disease. 
-- So, creating a way of life which revolves around clean air.
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
