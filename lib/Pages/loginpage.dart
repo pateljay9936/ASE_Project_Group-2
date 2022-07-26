@@ -153,6 +153,7 @@ class _loginpageState extends State<loginpage> {
                                   fontWeight: FontWeight.bold, fontSize: 20),
                             ),
                             GestureDetector(
+                              key: const Key('signIn'),
                               onTap: () {
                                 Navigator.push(
                                     context,

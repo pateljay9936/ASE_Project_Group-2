@@ -233,6 +233,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 fontSize: 20),
                           ),
                           GestureDetector(
+                            key: const Key('loginsignin'),
                             onTap: () {
                               Navigator.push(
                                   context,
