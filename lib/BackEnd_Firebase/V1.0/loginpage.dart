@@ -51,7 +51,6 @@ class _loginpageState extends State<loginpage> {
         ));
 
     final passwordField = TextFormField(
-        key: Key("password"),
         autofocus: false,
         controller: passwordEditingController,
         obscureText: true,

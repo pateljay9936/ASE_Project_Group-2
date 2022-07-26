@@ -2,6 +2,8 @@
 
 import 'package:ase_project1/Model/user_model.dart';
 import 'package:ase_project1/Pages/Test.dart';
+import 'package:ase_project1/Pages/community.dart';
+import 'package:ase_project1/calendar_widget.dart';
 import 'package:ase_project1/my_drawer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -21,6 +23,7 @@ class _HomeAppState extends State<HomeApp> {
   User? user = FirebaseAuth.instance.currentUser;
   UserModel loggedInUser = UserModel();
 
+  @override
   void initState() {
     super.initState();
     FirebaseFirestore.instance
@@ -125,28 +128,27 @@ class _HomeAppState extends State<HomeApp> {
           Padding(
             padding: EdgeInsets.all(8),
             child: InkWell(
-              onTap: () {},
-              child: Column(
-                children: [
-                  Ink.image(
-                    image: AssetImage('community.png'),
-                    height: 200,
-                    width: 200,
-                    fit: BoxFit.cover,
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    "Community",
-                    style: TextStyle(fontSize: 32, color: Colors.black),
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                ],
-              ),
-            ),
+                onTap: () {},
+                child: Column(
+                  children: [
+                    Ink.image(
+                      image: AssetImage('community.png'),
+                      height: 200,
+                      width: 200,
+                      fit: BoxFit.cover,
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Text(
+                      "Community",
+                      style: TextStyle(fontSize: 32, color: Colors.black),
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                  ],
+                )),
           ),
         ],
       ),

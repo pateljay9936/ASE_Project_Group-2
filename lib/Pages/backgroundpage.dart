@@ -19,7 +19,7 @@ class _bgpageState extends State<bgpage> {
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.fill,
-            image: AssetImage("assets/LOGIN123.jpg"),
+            image: AssetImage("assets/LOGIN123.gif"),
           ),
         ),
       ),

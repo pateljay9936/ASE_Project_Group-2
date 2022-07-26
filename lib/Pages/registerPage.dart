@@ -1,9 +1,9 @@
 // ignore_for_file: unnecessary_new, prefer_const_constructors, non_constant_identifier_names
 
-import 'package:ase_project1/Model/user_model.dart';
 import 'package:ase_project1/Pages/backgroundpage.dart';
 import 'package:ase_project1/Pages/homepage.dart';
 import 'package:ase_project1/Pages/loginpage.dart';
+import 'package:ase_project1/model/user_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -33,6 +33,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     final nameField = TextFormField(
+      key: const Key('name'),
       autofocus: false,
       controller: nameEditingController,
       keyboardType: TextInputType.name,
@@ -56,6 +57,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
     );
     final numberField = TextFormField(
+      key: const Key('number'),
       autofocus: false,
       controller: numberEditingController,
       keyboardType: TextInputType.number,
@@ -79,6 +81,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
     );
     final emailField = TextFormField(
+      key: const Key('email'),
       autofocus: false,
       controller: emailEditingController,
       keyboardType: TextInputType.emailAddress,
@@ -103,6 +106,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
     );
     final passwordField = TextFormField(
+      key: const Key('pass'),
       autofocus: false,
       obscureText: true,
       controller: passwordEditingController,
@@ -127,6 +131,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
     );
     final confirmpasswordField = TextFormField(
+      key: const Key('c_pass'),
       autofocus: false,
       obscureText: true,
       controller: confirmpasswordEditingController,
@@ -149,6 +154,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
 
     final SignUpButton = Material(
+      key: const Key('finalsignup'),
       elevation: 10,
       borderRadius: BorderRadius.circular(30),
       color: Colors.white,
@@ -183,7 +189,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         bgpage(),
         Scaffold(
           resizeToAvoidBottomInset: false,
-          backgroundColor: Colors.white60,
+          backgroundColor: Colors.white10,
           body: Column(
             children: [
               Container(
@@ -296,7 +302,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
     User? user = _auth.currentUser;
 
-    UserModel userModel = UserModel();
+    UserModel userModel = new UserModel();
     userModel.email = user!.email;
     userModel.uid = user.uid;
     userModel.name = nameEditingController.text;
@@ -308,7 +314,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         .set(userModel.toMap());
     Fluttertoast.showToast(msg: "Account created successfully :) ");
 
-    Navigator.push(
-        (context), MaterialPageRoute(builder: (context) => HomeApp()));
+    Navigator.pushAndRemoveUntil((context),
+        MaterialPageRoute(builder: (context) => HomeApp()), (route) => false);
   }
 }

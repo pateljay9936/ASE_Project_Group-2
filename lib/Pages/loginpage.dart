@@ -108,7 +108,7 @@ class _loginpageState extends State<loginpage> {
         bgpage(),
         Scaffold(
           resizeToAvoidBottomInset: false,
-          backgroundColor: Colors.white60,
+          backgroundColor: Colors.white10,
           body: Column(
             children: [
               Container(

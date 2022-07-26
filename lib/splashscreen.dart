@@ -32,25 +32,11 @@ class InitState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       resizeToAvoidBottomInset: false,
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color(0xFFf1a00a),
-                  Color(0xFFf1a00a),
-                  Color(0xFF040404),
-                  Color(0xFF0cc0df),
-                  Color(0xFF075567),
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-            ),
-          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[

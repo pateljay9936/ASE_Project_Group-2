@@ -70,7 +70,6 @@ class _loginpageState extends State<loginpage> {
         ));
 
     final loginButton = Material(
-      key: const ValueKey("logIn"),
       elevation: 10,
       borderRadius: BorderRadius.circular(30),
       color: Colors.white,
@@ -165,7 +164,6 @@ class _loginpageState extends State<loginpage> {
                                     color: Colors.red,
                                     fontSize: 20),
                               ),
-                              key: const ValueKey("SignIn"),
                             ),
                           ],
                         ),
